@@ -17,3 +17,7 @@
 > 将-u xxx.xxx.xxx换为-f target_sub.txt，一行一个域名
 ![](222.png)
 ![](3.png)
+
+参考：
+https://github.com/Threezh1/JSFinder
+https://github.com/chengyizhou147/InfoScan
