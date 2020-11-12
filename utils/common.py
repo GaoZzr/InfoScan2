@@ -202,6 +202,7 @@ def Baocun(url,result_all):
             (sub_name) values ('"""+str(res)+"""')
             """
         cursor.execute(sql2)
+        db.commit()
         f.write(res + '\n')
     f.close()
     db.close()
@@ -225,6 +226,7 @@ def Baocun_Cunhuo_url(url,result_all):
             (cunhuo_url) values ('"""+str(res)+"""')
             """
         cursor.execute(sql3)
+        db.commit()
         f.write(res + '\n')
     f.close()
     db.close()
@@ -248,6 +250,7 @@ def Baocun_WAF_url(url,result_all):
                 (cunhuo_url_no_waf) values ('""" + str(res) + """')
                 """
         cursor.execute(sql3)
+        db.commit()
         f.write(res + '\n')
     f.close()
     logger.log('INFOR', 'url写入' + str(get_domain_root(url).replace('.', '_')) + '数据库成功\n')
