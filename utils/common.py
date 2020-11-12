@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 #封装一些通用的请求方法
 
 from utils.config import *
