@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 # 通过yumingco.com第三方网站获取子域名
 from utils.common import *
 
