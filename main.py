@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 import argparse
 from utils.crt import *
 from utils.yumingco import Yumingco
