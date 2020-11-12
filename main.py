@@ -13,14 +13,11 @@ from utils.common import *
 import sys
 db = connet()
 def parse_args():
-    parser = argparse.ArgumentParser(epilog='\tExample: \r\npython ' + sys.argv[0] + " -u http://www.baidu.com")
-    parser.add_argument("-u", "--url", help="The website")
-    parser.add_argument("-f", "--file", help="The file contains url or js")
-    parser.add_argument("-ou", "--outputurl", help="Output file name. ")
-    parser.add_argument('-w', "--waf",action='store_true')
-    parser.add_argument("-os", "--outputsubdomain", help="Output file name. ")
-    parser.add_argument("-j", "--js", action="store_true")
-    parser.add_argument("-d", "--deep",help="Deep find", action="store_true")
+    parser = argparse.ArgumentParser(epilog='\tExample: \r\npython3 ' + sys.argv[0] + " -u http://www.baidu.com")
+    parser.add_argument("-u", "--url", help="The subdomain")
+    parser.add_argument("-f", "--file", help="The subdomain file ")
+    parser.add_argument('-w', "--waf",action='store_true',help='waf detection')
+    parser.add_argument("-j", "--js", action="store_true",help='js find')
     return parser.parse_args()
 
 # 接受用户输入的域名，调用InfoScan
