@@ -13,7 +13,7 @@ from utils.common import *
 import sys
 db = connet()
 def parse_args():
-    parser = argparse.ArgumentParser(epilog='\tExample: \r\npython3 ' + sys.argv[0] + " -u http://www.baidu.com")
+    parser = argparse.ArgumentParser(epilog='\tExample: \r\npython3 ' + sys.argv[0] + " -u www.baidu.com")
     parser.add_argument("-u", "--url", help="The subdomain")
     parser.add_argument("-f", "--file", help="The subdomain file ")
     parser.add_argument('-w', "--waf",action='store_true',help='waf detection')
