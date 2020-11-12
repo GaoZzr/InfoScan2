@@ -163,13 +163,31 @@ def user_input():
     if a=='b' or a == 'B':
         logger.log('INFOR', '正在准备子域名爆破')
 
+# 判断表是否存在
+
+def table_exists(table_name):        #这个函数用来判断表是否存在
+    db = connet()
+    cursor = db.cursor()
+    sql = "show tables;"
+    cursor.execute(sql)
+    tables = [cursor.fetchall()]
+    table_list = re.findall('(\'.*?\')',str(tables))
+    table_list = [re.sub("'",'',each) for each in table_list]
+    if table_name in table_list:
+        sql = "drop table "+table_name+";"
+        cursor.execute(sql)        #存在返回1
+    else:
+        return 0        #不存在返回0
+
+
 # 保存子域名到文件
 def Baocun(url,result_all):
     db = connet()
     cursor = db.cursor()
     try:
+        table_exists(str(get_domain_root(url).replace('.','_')))
         sql1 = """create table """+str(get_domain_root(url).replace('.','_'))+"""
-        (`SUB_NAME`  CHAR(50) , `cunhuo_url` char(255), `cunhuo_url_no_waf` char(255))
+        (`SUB_NAME`  CHAR(255) , `cunhuo_url` char(255), `cunhuo_url_no_waf` char(255))
         """
         cursor.execute(sql1)
     except Exception as e:
