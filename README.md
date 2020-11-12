@@ -3,7 +3,7 @@
 # 使用方法
 ## 配置数据库
 在config.py里面设置数据库账号和密码，并提前创建数据库
-![](1.png)
+![](111.png)
 ## 单个域名
 ### 自动收集域名并进行存活判断，结果写入数据库并导出文件到result文件下
 > python3 mian.py -u xxxx.xxxx.xxx
@@ -15,5 +15,5 @@
 > python3 mian.py -u xxxx.xxxx.xxx -w -j
 ## 批量
 > 将-u xxx.xxx.xxx换为-f target_sub.txt，一行一个域名
-![](2.png)
+![](222.png)
 ![](3.png)
