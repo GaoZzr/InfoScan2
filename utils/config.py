@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 # 定义一些全局变量
 
 import random
