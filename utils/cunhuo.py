@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 from utils.common import *
 import threading
 from queue import Queue     # 接收域名
