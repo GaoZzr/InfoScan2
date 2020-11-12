@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 # 通过crt.sh证书查询子域名
 from utils.common import *
 
