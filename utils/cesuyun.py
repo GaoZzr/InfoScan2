@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 from utils.common import *
 class Cesuyun(object):
     def __init__(self,domain):
