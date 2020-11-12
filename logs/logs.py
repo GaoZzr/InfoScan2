@@ -25,12 +25,12 @@ log_path = log_path.joinpath('log.log').resolve()
 
 
 logger.remove()
-logger.level(name='TRACE', no=5, color='<cyan><bold>', icon='✏️')
-logger.level(name='DEBUG', no=10, color='<blue><bold>', icon='🐞 ')
+#logger.level(name='TRACE', no=5, color='<cyan><bold>', icon='✏️')
+#logger.level(name='DEBUG', no=10, color='<blue><bold>', icon='🐞 ')
 logger.level(name='INFOR', no=20, color='<green><bold>', icon='ℹ️')
 logger.level(name='ALERT', no=30, color='<white><bold>', icon='⚠️')
-logger.level(name='ERROR', no=40, color='<red><bold>', icon='❌️')
-logger.level(name='FATAL', no=50, color='<RED><bold>', icon='☠️')
+#logger.level(name='ERROR', no=40, color='<red><bold>', icon='❌️')
+#logger.level(name='FATAL', no=50, color='<RED><bold>', icon='☠️')
 if not os.environ.get('PYTHONIOENCODING'):  # 设置编码
     os.environ['PYTHONIOENCODING'] = 'utf-8'
 logger.add(sys.stderr, level='INFOR', format=stdout_fmt, enqueue=True)
