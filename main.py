@@ -13,7 +13,7 @@ from utils.common import *
 import sys
 db = connet()
 def parse_args():
-    parser = argparse.ArgumentParser(epilog='\tExample: \r\npython3 ' + sys.argv[0] + " -u www.baidu.com")
+    parser = argparse.ArgumentParser(epilog='\tExample: \r\npython3 ' + sys.argv[0] + " -u http://www.baidu.com")
     parser.add_argument("-u", "--url", help="The subdomain")
     parser.add_argument("-f", "--file", help="The subdomain file ")
     parser.add_argument('-w', "--waf",action='store_true',help='waf detection')
@@ -47,7 +47,7 @@ def InfoScan(url):
 
 # 判断是否存活
 def Cunhuo(url):
-    Cunhuo_domain(file=get_domain_root(url)).run(url)
+    Cunhuo_domain(file=get_domain_root(url)).run(get_domain_root(url))
 
 # 使用jsfinder进行爬取js文件
 def JsFinder(url):
@@ -57,7 +57,7 @@ def JsFinder2(url):
     Jsfinder(file=get_domain_root(url),a = 'cunhuo_url_no_waf',b=2).run()
 
 def Waf(url):
-    WAF(file = get_domain_root(url)).run(url)
+    WAF(file = get_domain_root(url)).run(get_domain_root(url))
 
 if __name__ == '__main__':
     #InfoScan('runoob.com')
